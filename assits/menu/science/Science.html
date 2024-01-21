@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+    }
+
+    .quiz-container {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #f4f4f4;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #ccc100;
+    }
+
+    .question {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .options label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .options input {
+        margin-right: 5px;
+    }
+
+    .submit-btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+        background-color: #ccc100;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .result {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>
+<body>
+    <div class="quiz-container">
+        <h1>Science Basics Quiz</h1>
+        <form>
+            <div class="question">
+                <p>1. What is the chemical symbol for water?</p>
+                <div class="options">
+                    <label><input type="radio" name="quiz1" value="1">a) H</label>
+                    <label><input type="radio" name="quiz1" value="2">b) O</label>
+                    <label><input type="radio" name="quiz1" value="3">c) H2O</label>
+                </div>
+                <button type="button" onclick="checkQuiz1()">Check</button>
+                <p id="result1" class="result"></p>
+            </div>
+    
+            <div class="question">
+                <p>2. Which gas do plants absorb during photosynthesis?</p>
+                <div class="options">
+                    <label><input type="radio" name="quiz2" value="1">a) Carbon Dioxide</label>
+                    <label><input type="radio" name="quiz2" value="2">b) Oxygen</label>
+                    <label><input type="radio" name="quiz2" value="3">c) Nitrogen</label>
+                </div>
+                <button type="button" onclick="checkQuiz2()">Check</button>
+                <p id="result2" class="result"></p>
+            </div>
+    
+            <div class="question">
+                <p>3. What is the powerhouse of the cell?</p>
+                <div class="options">
+                    <label><input type="radio" name="quiz3" value="1">a) Nucleus</label>
+                    <label><input type="radio" name="quiz3" value="2">b) Mitochondria</label>
+                    <label><input type="radio" name="quiz3" value="3">c) Ribosome</label>
+                </div>
+                <button type="button" onclick="checkQuiz3()">Check</button>
+                <p id="result3" class="result"></p>
+            </div>
+
+            <div class="question">
+                <p>4. What is the Chemical Formula of common salt?</p>
+                <div class="options">
+                    <label><input type="radio" name="quiz4" value="1">a) H<sub>2</sub>O</label>
+                    <label><input type="radio" name="quiz4" value="2">b) NACL</label>
+                    <label><input type="radio" name="quiz4" value="3">c) CO<sub>2</sub></label>
+                </div>
+                <button type="button" onclick="checkQuiz4()">Check</button>
+                <p id="result4" class="result"></p>
+            </div>
+    
+            <!-- Add more questions as needed -->
+    
+        </form>
+    </div>    
+    <script>
+        // Update the JavaScript functions accordingly for new questions
+        // ...
+
+        // Example function for reference
+        function checkQuiz1() {
+            var radios = document.getElementsByName("quiz1");
+            var result = document.getElementById("result1");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    if (radios[i].value == "3") {
+                        result.innerHTML = "Correct!";
+                        result.style.color = "green";
+                    } else {
+                        result.innerHTML = "Incorrect.";
+                        result.style.color = "red";
+                    }
+                    break;
+                }
+            }
+        }
+
+        function checkQuiz2() {
+            var radios = document.getElementsByName("quiz2");
+            var result = document.getElementById("result2");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    if (radios[i].value == "1") {
+                        result.innerHTML = "Correct!";
+                        result.style.color = "green";
+                    } else {
+                        result.innerHTML = "Incorrect.";
+                        result.style.color = "red";
+                    }
+                    break;
+                }
+            }
+        }
+
+        function checkQuiz3() {
+            var radios = document.getElementsByName("quiz3");
+            var result = document.getElementById("result3");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    if (radios[i].value == "2") {
+                        result.innerHTML = "Correct!";
+                        result.style.color = "green";
+                    } else {
+                        result.innerHTML = "Incorrect.";
+                        result.style.color = "red";
+                    }
+                    break;
+                }
+            }
+        }
+
+        function checkQuiz4() {
+            var radios = document.getElementsByName("quiz4");
+            var result = document.getElementById("result4");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    if (radios[i].value == "2") {
+                        result.innerHTML = "Correct!";
+                        result.style.color = "green";
+                    } else {
+                        result.innerHTML = "Incorrect.";
+                        result.style.color = "red";
+                    }
+                    break;
+                }
+            }
+        }
+        // ...
+    </script>
+</body>
+
+</html>

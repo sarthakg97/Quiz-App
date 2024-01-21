@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+    }
+
+    .quiz-container {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #f4f4f4;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #ccc100;
+    }
+
+    .question {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .options label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .options input {
+        margin-right: 5px;
+    }
+
+    .submit-btn {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        text-align: center;
+        background-color: #ccc100;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .result {
+        font-size: 20px;
+        text-align: center;
+        margin-top: 30px;
+    }
+</style>
+<body>
+    <div class="quiz-container">
+        <h1>Grammar Basics Quiz</h1>
+        <form>
+            <div class="question">
+                <p>1. Which of the following is a pronoun?</p>
+                <div class="options">
+                    <label><input type="radio" name="quiz1" value="1">a) Apple</label>
+                    <label><input type="radio" name="quiz1" value="2">b) He</label>
+                    <label><input type="radio" name="quiz1" value="3">c) Run</label>
+                </div>
+                <button type="button" onclick="checkQuiz1()">Check</button>
+                <p id="result1" class="result"></p>
+            </div>
+    
+            <div class="question">
+                <p>2. What is the correct form of the verb in the sentence "She ____ to the store."?</p>
+                <div class="options">
+                    <label><input type="radio" name="quiz2" value="1">a) Go</label>
+                    <label><input type="radio" name="quiz2" value="2">b) Went</label>
+                    <label><input type="radio" name="quiz2" value="3">c) Going</label>
+                </div>
+                <button type="button" onclick="checkQuiz2()">Check</button>
+                <p id="result2" class="result"></p>
+            </div>
+    
+            <div class="question">
+                <p>3. Which sentence is grammatically correct?</p>
+                <div class="options">
+                    <label><input type="radio" name="quiz3" value="1">a) They was here yesterday.</label>
+                    <label><input type="radio" name="quiz3" value="2">b) She were happy.</label>
+                    <label><input type="radio" name="quiz3" value="3">c) We were at the party.</label>
+                </div>
+                <button type="button" onclick="checkQuiz3()">Check</button>
+                <p id="result3" class="result"></p>
+            </div>
+    
+            <!-- Add more questions as needed -->
+    
+        </form>
+    </div>    
+    <script>
+        // Update the JavaScript functions accordingly for new questions
+        // ...
+
+        // Example function for reference
+        function checkQuiz1() {
+            var radios = document.getElementsByName("quiz1");
+            var result = document.getElementById("result1");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    if (radios[i].value == "2") {
+                        result.innerHTML = "Correct!";
+                        result.style.color = "green";
+                    } else {
+                        result.innerHTML = "Incorrect.";
+                        result.style.color = "red";
+                    }
+                    break;
+                }
+            }
+        }
+
+        function checkQuiz2() {
+            var radios = document.getElementsByName("quiz2");
+            var result = document.getElementById("result2");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    if (radios[i].value == "2") {
+                        result.innerHTML = "Correct!";
+                        result.style.color = "green";
+                    } else {
+                        result.innerHTML = "Incorrect.";
+                        result.style.color = "red";
+                    }
+                    break;
+                }
+            }
+        }
+
+        function checkQuiz3() {
+            var radios = document.getElementsByName("quiz3");
+            var result = document.getElementById("result3");
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    if (radios[i].value == "2") {
+                        result.innerHTML = "Correct!";
+                        result.style.color = "green";
+                    } else {
+                        result.innerHTML = "Incorrect.";
+                        result.style.color = "red";
+                    }
+                    break;
+                }
+            }
+        }
+        // ...
+    </script>
+</body>
+
+</html>
